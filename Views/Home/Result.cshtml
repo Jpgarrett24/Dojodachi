@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over!</title>
+</head>
+<body>
+    <main>
+        <section>
+            <span>Fullness: @ViewBag.Fullness</span>
+            <span>Happiness: @ViewBag.Happiness</span>
+            <span>Meals: @ViewBag.Meals</span>
+            <span>Energy: @ViewBag.Energy</span>
+        </section>
+        <img src="@ViewBag.Image">
+        <h1>@ViewBag.Response</h1>
+        <form action="/" action="POST">
+            <input type="hidden" name="action" value="reset">
+            <button>Restart?</button>
+        </form>
+    </main>
+</body>
+</html>

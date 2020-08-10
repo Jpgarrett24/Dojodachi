@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojodachi</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <span>Fullness: @ViewBag.Fullness</span>
+            <span>Happiness: @ViewBag.Happiness</span>
+            <span>Meals: @ViewBag.Meals</span>
+            <span>Energy: @ViewBag.Energy</span>
+        </section>
+        <img src="@ViewBag.Image">
+        <p>@ViewBag.Response</p>
+    </main>
+    <section>
+        <form action="/" method="POST">
+            <input type="hidden" name="action" value="feed">
+            <button>Feed</button>
+        </form>
+        <form action="/" method="POST">
+            <input type="hidden" name="action" value="play">
+            <button>Play</button>
+        </form>
+        <form action="/" method="POST">
+            <input type="hidden" name="action" value="work">
+            <button>Work</button>
+        </form>
+        <form action="/" method="POST">
+            <input type="hidden" name="action" value="sleep">
+            <button>Sleep</button>
+        </form>
+    </section>
+</body>
+</html>
